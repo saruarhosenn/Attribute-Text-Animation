@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: sans-serif;
+}
+
+nav {
+	background: #000;
+	padding: 3rem 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+nav,
+.nam-arae {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 2rem;
+	position: relative;
+	transition: all .7s ease-in-out;
+}
+
+nav a::before {
+	content: attr(data-item);
+	transition: all .7s ease-in-out;
+	color: greenyellow;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+
+.nam-arae {
+	height: 100vh;
+}
+
+.title h1 {
+	font-weight: 900;
+	font-size: 6rem;
+	color: #5A5F73;
+	position: relative;
+	display: inline-block;
+}
+
+.title h1::before {
+	content: attr(text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: crimson;
+	width: 0%;
+	overflow: hidden;
+	transition: all 1s ease-in-out;
+}
+
+.title h1:hover::before {
+	width: 100%;
+}
+
+
+
+
